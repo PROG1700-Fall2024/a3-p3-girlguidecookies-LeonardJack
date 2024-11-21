@@ -9,6 +9,7 @@
 
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
+    # realised after making this that a 2d array would wok really well
 
     guidesNum = int(input("Please enter the number of guides selling cookies: ")) #makes user enter number of guides, used in for loop later
     guidesNames = [] #empty list used for guide names
@@ -25,7 +26,7 @@ def main():
         totalBoxes += guidesBoxes[i] #used to get the total amount of boxes for later calculation
     
     averageBoxes = totalBoxes / guidesNum # calculates the average number of boxes
-    print("The average number of boxes sold is {0} \n".format(totalBoxes)) #prints the average number of boxes sold
+    print("The average number of boxes sold is {0} \n".format(averageBoxes)) #prints the average number of boxes sold
 
     currentHighest = 0 #used to keep track of who currently has the highest amt of boxes sold
     bestGuide = 0 #used to keep track of the index of the guide with the most sold 
@@ -42,7 +43,7 @@ def main():
 
     guidesBadges[bestGuide] = "Trip to Girl Guide Jamboree in Aruba!" #gives the highest award to best guide
 
-    print("Guide:        Prizes won:\n-----------------------------------------") #formatting print statement so the organization of information makes sense
+    print("Guide:    Prizes won:\n-----------------------------------------") #formatting print statement so the organization of information makes sense
     for i in range(guidesNum): #for printing through each guide and their awards
         print("{0}     -{1}".format(guidesNames[i],guidesBadges[i]))
 
